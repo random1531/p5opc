@@ -1,0 +1,47 @@
+.photographname {
+    font-family: DM Sans;
+    font-weight: 400;
+    font-size: 64px;
+    color: #D3573C;
+    ;
+}
+
+.photographlocalisation {
+    font-family: DM Sans;
+    font-weight: 400;
+    font-size: 24px;
+    color: #901C1C;
+
+}
+
+.photographtaline {
+    font-family: DM Sans;
+    font-weight: 400;
+    font-size: 18px;
+    color: #525252;
+}
+
+.photographportrait {
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    object-fit: cover;
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1240px;
+    height: 313px;
+    background-color: #FAFAFA;
+
+}
+
+.containermedia {
+    display: grid;
+    width: 1240px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 95px;
+    justify-items: center;
+}

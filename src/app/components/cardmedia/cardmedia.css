@@ -1,0 +1,40 @@
+.cardmedia{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+height: 351px;
+
+
+}
+
+.pictures{
+    object-fit: cover;
+}
+
+.mediatitle{
+    font-family: DM Sans;
+font-weight: 400;
+font-size: 24px;
+
+color: #901C1C;
+
+}
+
+.footercard{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.video{
+    width: 350px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.eart{
+    cursor: pointer;
+    fill: red;
+    color: red;
+}

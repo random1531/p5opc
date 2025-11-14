@@ -3,10 +3,10 @@
 import "./cardmedia.css"
 import Image from "next/image"
 import { FaHeart } from "react-icons/fa";
+import Likes from "./likes/likes"
 
 
-
-export default function cardmedia({addlikes,video,picture,picturename,title,nblike,type}){
+export default function cardmedia({id,video,picture,picturename,title,nblike,type}){
 
     
     return(
@@ -21,8 +21,7 @@ export default function cardmedia({addlikes,video,picture,picturename,title,nbli
             }
             <div className="footercard">
                 <p className="mediatitle">{title}</p>
-                <p className="mediatitle">{nblike}</p>
-                <FaHeart className="eart"  onClick={console.log(nblike)}/>
+              <Likes id={id} nblike={nblike}/>
             </div>
         </div>
     )

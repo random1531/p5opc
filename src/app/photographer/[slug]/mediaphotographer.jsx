@@ -12,7 +12,7 @@ export default async function dataphoto({ params }) {
     return (
         <div className="containermedia">
         {dataphoto.map((e)=>(
-           <MediaCard key={e.id} title={e.title}  picture={e.image} picturename={e.title} nblike={e.likes} video={e.video}  />
+           <MediaCard key={e.id} title={e.title}  picture={e.image} picturename={e.title} nblike={e.likes} video={e.video} id={e.id} />
         ))}
         </div>
     )

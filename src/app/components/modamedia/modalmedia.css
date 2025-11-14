@@ -1,0 +1,35 @@
+.modalmedia{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+    top: 0;
+    left: 0;
+}
+
+.exit{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.media{
+    width: 1050px;
+    height: 87%;
+    object-fit: cover;
+}
+
+.contentmodal{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow{
+    font-size: 48px;
+    fill: #901C1C;
+    cursor: pointer;
+}

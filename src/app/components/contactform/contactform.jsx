@@ -1,6 +1,6 @@
 "use client"
 import "./contactform.css"
-import { useState } from "react"
+import { useState ,useEffect} from "react"
 export default function contactform({ name, close }) {
     const [nom, setNom] = useState("")
     const [prenom, setPrenom] = useState("")
@@ -20,7 +20,12 @@ export default function contactform({ name, close }) {
         console.log(form)
         SetSucces(!succes)
     }
-
+useEffect(() => {
+        document.body.style.overflow = 'hidden';
+        return () => {
+            document.body.style.overflow = 'auto';
+        };
+    }, []);
     return (
 
         <div className="test">

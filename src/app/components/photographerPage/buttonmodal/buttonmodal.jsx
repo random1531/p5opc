@@ -2,7 +2,7 @@
 import "./buttonmodal.css"
 import Image from "next/image"
 import { useState } from "react"
-import ModalMedia from "../../components/modamedia/modalmedia"
+import ModalMedia from "../modamedia/modalmedia"
 export default function picturecard({ picture, video, picturename,dataformodal,indexselected }) {
     const [isOpen, setisOpen] = useState(false)
     const [index,setIndex] = useState()
@@ -11,7 +11,7 @@ export default function picturecard({ picture, video, picturename,dataformodal,i
        setisOpen(!isOpen)
        setIndex(indexselected)
     }
-console.log(index)
+
     return (
         <>
             {picture &&

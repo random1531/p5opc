@@ -1,0 +1,12 @@
+.bottominfo{
+    position:fixed;
+    bottom: 0;
+    right: 80px;
+    width: 376px;
+    height: 65px;
+    background-color: #DB8876;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

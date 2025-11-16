@@ -10,10 +10,7 @@ export default function modalmedia({ data, Click, ind }) {
     const item = data.find((item, index) => index === actualindex)
 
     const lg = data.length
-    console.log(lg)
-    const handleCarousel = () => {
-
-    }
+    
 
     useEffect(() => {
         document.body.style.overflow = 'hidden';
@@ -22,7 +19,7 @@ export default function modalmedia({ data, Click, ind }) {
         };
     }, []);
 
-    console.log(item)
+    
     return (
         <div className="modalmedia">
             <ImCross className="exit" onClick={Click} />

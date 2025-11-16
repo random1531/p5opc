@@ -1,10 +1,10 @@
-import { getPhotographer } from "../../lib/prisma-db"
-import Buttonform from "../../components/button/buttonactionform"
+import { getPhotographer } from "../../../lib/prisma-db"
+import Buttonform from "../../button/buttonactionform"
 import Image from "next/image"
 import "./photographer.css"
 export default async function dataphoto({ params }) {
-    const { slug } = await params
-    const dataphoto = await getPhotographer(parseInt(slug))
+    
+    const dataphoto = params
     
     return (
         <div className="head">

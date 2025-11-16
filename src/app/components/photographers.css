@@ -35,6 +35,11 @@ text-align: center;
 color: #757575;
 
 }
+.photographercard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .photographercard a{
     display: flex;
@@ -50,4 +55,5 @@ width: 33%;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 45px;
+    width: 100%;
 }

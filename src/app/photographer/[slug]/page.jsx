@@ -1,5 +1,5 @@
-import HeadPhoto from "../../components/photographerPage/temporary/dataphotographer"
-import Mediaphoto from "../../components/photographerPage/temporary/mediaphotographer"
+import HeadPhoto from "../../components/photographerPage/photographerInfo"
+import Mediaphoto from "../../components/photographerPage/mediaGrid"
 import Bottominfo from "@/app/components/photographerPage/bottominfo/bottominfo"
 import { getAllMediasForPhotographer, getPhotographer } from "../../lib/prisma-db"
 export default async function photographer({ params }) {

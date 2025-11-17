@@ -1,5 +1,4 @@
-import { getPhotographer } from "../../../lib/prisma-db"
-import Buttonform from "../../button/buttonactionform"
+import Buttonform from "../button/buttonactionform"
 import Image from "next/image"
 import "./photographer.css"
 export default async function dataphoto({ params }) {

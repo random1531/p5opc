@@ -1,12 +1,13 @@
 "use client"
 import { useState } from "react"
-import MediaCard from "../cardmedia/cardmedia"
+import MediaCard from "../photographerPage/cardmedia/cardmedia"
 import "./photographer.css"
-import Sort from "../sort/sort"
+import Sort from "../photographerPage/sort/Sort"
 export default function dataphoto({ params }) {
     const [media, setMedia] = useState(params.sort((a, b) => b.likes - a.likes))
     const handlselect = (e) => {
         const selected = e.target.value
+        console.log(e.target.value)
         if (selected === "Popularité") {
             setMedia([...params].sort((a, b) => b.likes - a.likes))
         }
@@ -25,13 +26,13 @@ export default function dataphoto({ params }) {
             ))
         }
         if (selected === "Date") {
-            setMedia([...params].sort((a, b) => new Date( b.date) - new Date (a.date)))
+            setMedia([...params].sort((a, b) => new Date(b.date) - new Date(a.date)))
         }
     }
 
     return (
         <>
-            <Sort likes={handlselect} />
+            <Sort likes={handlselect}  />
             <div className="containermedia">
                 {media.map((e, index) => (
                     <MediaCard

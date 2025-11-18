@@ -4,7 +4,7 @@ import "./cardmedia.css"
 import Image from "next/image"
 import { FaHeart } from "react-icons/fa";
 import Likes from "./likes/likes"
-import MediaCard from "../buttonmodal/ButtonModal"
+import MediaCard from "../buttonmodal/buttonmodal"
 
 export default function cardmedia({id,video,picture,picturename,title,nblike,dataformodal,idx}){
 

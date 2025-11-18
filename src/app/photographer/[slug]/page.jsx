@@ -10,11 +10,11 @@ export default async function photographer({ params }) {
    
     console.log(mediaphotographer.map(i => i.likes).reduce((a, b) => a + b))
     return (
-        <>
+        <div className="pagephotographer">
         <Bottominfo price={photographer.price} totallikes={mediaphotographer.map(i => i.likes).reduce((a, b) => a + b)} />
             <HeadPhoto params={photographer} />
             <Mediaphoto params={mediaphotographer} />
 
-        </>
+        </div>
     )
 }

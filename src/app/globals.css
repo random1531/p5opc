@@ -17,3 +17,9 @@ body{
 main{
   width: 100%;
 }
+
+.pagephotographer{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

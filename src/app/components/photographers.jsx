@@ -9,10 +9,10 @@ export default async function photographers() {
     return (
         <div className="photographers">
             {DataPhotographer.map((item) => (
-                <Link href={`/photographer/${item.id}`} key={item.id}>
+                <Link href={`/photographer/${item.id}`} aria-label={item.name} key={item.id}>
                     <div className="photographercard">
                         <Image className="photographerportrait" src={`/${item.portrait}`} alt="" width={300} height={300} />
-                        <h3 className="photographername">{item.name}</h3>
+                        <h2 aria-label={item.name} className="photographername">{item.name}</h2>
                         <p className="photographerlocalisation">{item.city},{item.country}</p>
                         <p className="photographertagline">{item.tagline}</p>
                         <p className="photographerprice">{item.price}€/jour</p>

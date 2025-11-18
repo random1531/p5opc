@@ -2,7 +2,7 @@
 import { useState } from "react"
 import MediaCard from "../photographerPage/cardmedia/cardmedia"
 import "./photographer.css"
-import Sort from "../photographerPage/sort/Sort.jsx"
+import Sort from "./sort/sort"
 export default function dataphoto({ params }) {
     const [media, setMedia] = useState(params.sort((a, b) => b.likes - a.likes))
     const handlselect = (e) => {

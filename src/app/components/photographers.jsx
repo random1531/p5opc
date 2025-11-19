@@ -11,7 +11,7 @@ export default async function photographers() {
             {DataPhotographer.map((item) => (
                 <Link href={`/photographer/${item.id}`} aria-label={item.name} key={item.id}>
                     <div className="photographercard">
-                        <Image className="photographerportrait" src={`/${item.portrait}`} alt={item.name} width={300} height={300} />
+                        <Image className="photographerportrait" src={`/${item.portrait}`} aria-label={item.name} width={300} height={300} />
                         <h2 aria-label={item.name} className="photographername">{item.name}</h2>
                         <p className="photographerlocalisation">{item.city},{item.country}</p>
                         <p className="photographertagline">{item.tagline}</p>

@@ -2,11 +2,18 @@
     position:fixed;
     bottom: 0;
     right: 80px;
-    width: 376px;
-    height: 65px;
+    width: 200px;
+    height: 45px;
+    padding: 10px;
+    border-radius: 5px;
     background-color: #DB8876;
     color: black;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.heatbottom{
+    display: flex;
+    gap: 20px;
 }

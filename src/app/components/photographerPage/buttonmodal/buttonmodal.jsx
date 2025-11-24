@@ -20,7 +20,7 @@ export default function picturecard({ picture, video, picturename,dataformodal,i
             }
             {video &&
 
-                <video onClick={handleCilck} className="video" src={`/${video}`} autoPlay loop />
+                <video onClick={handleCilck} className="video" src={`/${video}`} alt={picturename} autoPlay loop />
             }
             {isOpen && 
                 <ModalMedia ind={index} Click={()=> setisOpen(!isOpen)} data={dataformodal} />

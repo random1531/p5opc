@@ -40,16 +40,16 @@ export default function modalmedia({ data, Click, ind }) {
 
     return (
         <div className="modalmedia">
-            <ImCross className="exit" onClick={Click} />
+            <ImCross className="exit" alt="exit" onClick={Click} />
             <div className="contentmodal">
-                <FaAngleLeft aria-label="left navigation" className="arrow" onClick={leftnav} />
+                <FaAngleLeft aria-label="left navigation" alt="Precedent" className="arrow" onClick={leftnav} />
                 {item && item.image &&
                     <Image className="media" src={`/${item.image}`} width={400} height={300} alt={item.title} />
                 }{
                     item && item.video &&
-                    <video className="media" src={`/${item.video}`} autoPlay loop />
+                    <video className="media" alt={item.title} src={`/${item.video}`} autoPlay loop />
                 }
-                <FaAngleRight className="arrow" onClick={rightnav} />
+                <FaAngleRight className="arrow" alt="Suivant" onClick={rightnav} />
             </div>
         </div>
     )

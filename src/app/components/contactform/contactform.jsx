@@ -54,7 +54,7 @@ useEffect(() => {
                         <label htmlFor="message">Votre message</label>
                         <input className="message" id="message" value={message} onChange={(e) => setMessage(e.target.value)} type="text" />
                     </div>
-                    <button onClick={handleSubmit} className="sendbutton">Envoyer</button>
+                    <button onClick={handleSubmit} aria-label="envoyer" className="sendbutton">Envoyer</button>
                 </form>
             </div>
         </div>

@@ -6,7 +6,7 @@ export default function buttonform({ phname }) {
     const [isOpen, setisOpen] = useState(false)
     
     return (<div>
-        <button aria-label="Contact Me" onClick={() => setisOpen(!isOpen)} className="buttonaction">Contactez-moi</button>
+        <button aria-label="Contactez moi le formulaire" onClick={() => setisOpen(!isOpen)} className="buttonaction">Contactez-moi</button>
         {isOpen && <FormContact name={phname} close={() => setisOpen(!isOpen)} />}
     </div>
     )

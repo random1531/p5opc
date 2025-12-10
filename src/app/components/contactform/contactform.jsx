@@ -29,7 +29,6 @@ useEffect(() => {
     return (
 
         <div className="test">
-                {succes && <p>Formulaire envoyer avec succes</p>}
             <div className="containerform">
                 <div className="headform">
                     <h3>Contactez-moi</h3>

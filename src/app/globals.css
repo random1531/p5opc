@@ -5,7 +5,10 @@
   text-decoration: none;
   color: black;
 }
-
+html{
+  max-width: 1440px;
+   margin: auto;
+}
 body{
   max-width: 1440px;
   display: flex;

@@ -15,7 +15,7 @@ export default function likes({id,nblike}) {
 
     return (
         <div className="likesadd">
-            <p aria-label="likes" id={parseInt(id)}  className="mediatitle">{likes}</p>
+            <span id={parseInt(id)}  className="mediatitle">{likes}</span>
             <FaHeart className="eart"  onClick={handleLike} />
         </div>
     )

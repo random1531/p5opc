@@ -14,7 +14,7 @@ export default function cardmedia({id,video,picture,picturename,title,nblike,dat
        
             <MediaCard className="video" indexselected={idx} picture={picture} video={video} picturename={picturename} dataformodal={dataformodal}/>
             <div className="footercard">
-                <p className="mediatitle">{title}</p>
+                <span className="mediatitle">{title}</span>
               <Likes id={id} nblike={nblike}/>
             </div>
         </div>

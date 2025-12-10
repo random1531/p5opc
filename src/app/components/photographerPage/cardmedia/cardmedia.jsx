@@ -10,13 +10,13 @@ export default function cardmedia({id,video,picture,picturename,title,nblike,dat
 
     
     return(
-        <div className="cardmedia" >
+        <article className="cardmedia" >
        
             <MediaCard className="video" indexselected={idx} picture={picture} video={video} picturename={picturename} dataformodal={dataformodal}/>
             <div className="footercard">
                 <span className="mediatitle">{title}</span>
               <Likes id={id} nblike={nblike}/>
             </div>
-        </div>
+        </article>
     )
 }

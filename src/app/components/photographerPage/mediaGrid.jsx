@@ -33,7 +33,7 @@ export default function dataphoto({ params }) {
     return (
         <>
             <Sort likes={handlselect}  />
-            <div className="containermedia">
+            <nav className="containermedia">
                 {media.map((e, index) => (
                     <MediaCard
                         key={e.id}
@@ -47,7 +47,7 @@ export default function dataphoto({ params }) {
                         dataformodal={media} />
                 ))}
 
-            </div>
+            </nav>
         </>
     )
 }

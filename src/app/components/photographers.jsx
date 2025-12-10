@@ -7,18 +7,18 @@ import Link from "next/link"
 export default async function photographers() {
     const DataPhotographer = await getAllPhotographers()
     return (
-        <div className="photographers">
-            {DataPhotographer.map((item) => (
+        <nav className="photographers">
+            {DataPhotographer ? DataPhotographer.map((item) => (
                 <Link href={`/photographer/${item.id}`} aria-label={`${item.name} ${item.tagline}`} key={item.id}>
-                    <div className="photographercard">
+                    <article className="photographercard">
                         <Image className="photographerportrait" src={`/${item.portrait}`} alt={item.name} aria-label={item.name} width={300} height={300} />
                         <h2 aria-label={item.name} className="photographername">{item.name}</h2>
                         <p className="photographerlocalisation">{item.city},{item.country}</p>
                         <p className="photographertagline">{item.tagline}</p>
                         <p className="photographerprice">{item.price}€/jour</p>
-                    </div>
+                    </article>
                 </Link>
-            ))}
-        </div>
+            )): <p>Loading...</p>}
+        </nav>
     )
 }

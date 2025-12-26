@@ -23,6 +23,8 @@ export default function picturecard({
       {picture && (
         <Image
           onClick={handleCilck}
+         onKeyDown={e => e.key === "Enter" && handleCilck()}
+         tabIndex={0}
           className="video"
           src={`/${picture}`}
           alt={picturename}
@@ -33,6 +35,8 @@ export default function picturecard({
       {video && (
         <video
           onClick={handleCilck}
+          onKeyDown={e => e.key === "Enter" && handleCilck()}
+           tabIndex={0}
           className="video"
           src={`/${video}`}
           alt={picturename}
@@ -44,6 +48,7 @@ export default function picturecard({
         <ModalMedia
           ind={index}
           Click={() => setisOpen(!isOpen)}
+          
           data={dataformodal}
         />
       )}

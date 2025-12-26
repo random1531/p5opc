@@ -37,11 +37,6 @@ export default function modalmedia({ data, Click, ind }) {
     window.addEventListener("keydown", usekeyboard);
   });
 
-  const handleEnter = (e) => {
-    if (e.key === "Enter" || e.key === " ") {
-      action();
-    }
-  };
 
   return (
     <div className="modalmedia" ref={ref} tabIndex={-1} role="modal">
@@ -58,6 +53,7 @@ export default function modalmedia({ data, Click, ind }) {
           alt="Precedent"
           className="arrow"
           tabIndex={0}
+          onKeyDown={e => e.key === "Enter" && leftnav()}
           onClick={leftnav}
         />
         {item && item.image && (
@@ -83,6 +79,7 @@ export default function modalmedia({ data, Click, ind }) {
           alt="Suivant"
           tabIndex={0}
           onClick={rightnav}
+          onKeyDown={e => e.key === "Enter" && rightnav()}
         />
       </div>
     </div>

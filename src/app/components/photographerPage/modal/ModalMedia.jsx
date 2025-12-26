@@ -1,56 +1,90 @@
-"use client"
-import "./modalmedia.css"
+"use client";
+import "./modalmedia.css";
 import { ImCross } from "react-icons/im";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
 import Image from "next/image";
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react";
 export default function modalmedia({ data, Click, ind }) {
+  const [actualindex, setIndex] = useState(ind);
+  const item = data.find((item, index) => index === actualindex);
+  const lg = data.length;
+  const ref = useRef(null);
 
-    const [actualindex, setIndex] = useState(ind)
-    const item = data.find((item, index) => index === actualindex)
-    const lg = data.length
+  const leftnav = () =>
+    setIndex(actualindex > 0 ? actualindex - 1 : data?.length - 1);
+  const rightnav = () => setIndex(actualindex < lg - 1 ? actualindex + 1 : 0);
 
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    if (ref.current) ref.current.focus();
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, []);
 
-    const leftnav = () => setIndex(actualindex > 0 ? actualindex - 1 : data?.length - 1)
-    const rightnav = () => setIndex(actualindex < lg - 1 ? actualindex + 1 : 0)
-
-
-    useEffect(() => {
-        document.body.style.overflow = 'hidden';
-        return () => {
-            document.body.style.overflow = 'auto';
-        };
-
-    }, []);
-
-    const usekeyboard = (e) => {
-        if (e.key === "ArrowRight") {
-            rightnav()
-        }
-        if (e.key === "ArrowLeft") {
-            leftnav()
-        }
-        if (e.key === "Escape") {
-            Click()
-        }
+  const usekeyboard = (e) => {
+    if (e.key === "ArrowRight") {
+      rightnav();
     }
-    useEffect(() => {
-        window.addEventListener("keydown", usekeyboard)
-    })
+    if (e.key === "ArrowLeft") {
+      leftnav();
+    }
+    if (e.key === "Escape") {
+      Click();
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("keydown", usekeyboard);
+  });
 
-    return (
-        <div className="modalmedia">
-            <ImCross className="exit" alt="exit" onClick={Click} />
-            <div className="contentmodal">
-                <FaAngleLeft aria-label="left navigation" alt="Precedent" className="arrow" onClick={leftnav} />
-                {item && item.image &&
-                    <Image className="media" src={`/${item.image}`} width={400} height={300} alt={item.title} />
-                }{
-                    item && item.video &&
-                    <video className="media" alt={item.title} src={`/${item.video}`} autoPlay loop />
-                }
-                <FaAngleRight className="arrow" alt="Suivant" onClick={rightnav} />
-            </div>
-        </div>
-    )
+  const handleEnter = (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      action();
+    }
+  };
+
+  return (
+    <div className="modalmedia" ref={ref} tabIndex={-1} role="modal">
+      <ImCross
+        className="exit"
+        alt="exit"
+        tabIndex={0}
+        
+        onClick={Click}
+      />
+      <div className="contentmodal">
+        <FaAngleLeft
+          aria-label="left navigation"
+          alt="Precedent"
+          className="arrow"
+          tabIndex={0}
+          onClick={leftnav}
+        />
+        {item && item.image && (
+          <Image
+            className="media"
+            src={`/${item.image}`}
+            width={400}
+            height={300}
+            alt={item.title}
+          />
+        )}
+        {item && item.video && (
+          <video
+            className="media"
+            alt={item.title}
+            src={`/${item.video}`}
+            autoPlay
+            loop
+          />
+        )}
+        <FaAngleRight
+          className="arrow"
+          alt="Suivant"
+          tabIndex={0}
+          onClick={rightnav}
+        />
+      </div>
+    </div>
+  );
 }

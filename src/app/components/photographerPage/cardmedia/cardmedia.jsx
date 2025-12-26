@@ -7,10 +7,14 @@ import Likes from "./likes/likes"
 import MediaCard from "../buttonmodal/buttonmodal"
 
 export default function cardmedia({id,video,picture,picturename,title,nblike,dataformodal,idx}){
-
+    const handleEnter = (e)=> {
+        if (e.key === "Enter" || e.key === " " ){
+          Click()
+        }
+    }
     
     return(
-        <article className="cardmedia" >
+        <article className="cardmedia" tabIndex={0} onClick={(e)=> handleEnter(e)} >
        
             <MediaCard className="video" indexselected={idx} picture={picture} video={video} picturename={picturename} dataformodal={dataformodal}/>
             <div className="footercard">

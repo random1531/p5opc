@@ -3,7 +3,7 @@
     font-weight: 400;
     font-size: 36px;
     text-align: center;
-    color: #D3573C;
+    color: #d3573c;
     background-color: #fff;
 }
 
@@ -17,7 +17,7 @@
     font-weight: 400;
     font-size: 15px;
     text-align: center;
-    color: #901C1C;
+    color: #901c1c;
 }
 
 .photographertagline {
@@ -25,7 +25,6 @@
     font-weight: 400;
     font-size: 12px;
     text-align: center;
-
 }
 
 .photographerprice {
@@ -34,7 +33,6 @@
     font-size: 12px;
     text-align: center;
     color: #757575;
-
 }
 
 .photographercard {

@@ -1,5 +1,5 @@
 import "./globals.css";
-import Header from "../app/components/header/header"
+import Header from "../app/components/header/header";
 
 export const metadata = {
   title: "Fisheye",
@@ -9,11 +9,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
-      <body >
+      <body>
         <Header />
-        <main>
-          {children}
-        </main>
+        <main>{children}</main>
       </body>
     </html>
   );

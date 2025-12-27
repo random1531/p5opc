@@ -5,11 +5,11 @@
   text-decoration: none;
   color: black;
 }
-html{
+html {
   max-width: 1440px;
-   margin: auto;
+  margin: auto;
 }
-body{
+body {
   max-width: 1440px;
   display: flex;
   align-items: center;
@@ -17,11 +17,11 @@ body{
   flex-direction: column;
 }
 
-main{
+main {
   width: 100%;
 }
 
-.pagephotographer{
+.pagephotographer {
   display: flex;
   flex-direction: column;
   gap: 20px;

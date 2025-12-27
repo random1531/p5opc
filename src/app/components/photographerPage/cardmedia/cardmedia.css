@@ -1,31 +1,28 @@
-.cardmedia{
+.cardmedia {
     display: flex;
     flex-direction: column;
     width: 350px;
-height: 351px;
-
-
+    height: 351px;
 }
 
-.pictures{
+.pictures {
     object-fit: cover;
 }
 
-.mediatitle{
+.mediatitle {
     font-family: DM Sans;
-font-weight: 400;
-font-size: 24px;
-color: #901C1C;
-
+    font-weight: 400;
+    font-size: 24px;
+    color: #901c1c;
 }
 
-.footercard{
+.footercard {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.video{
+.video {
     width: 350px;
     height: 300px;
     object-fit: cover;
@@ -33,7 +30,7 @@ color: #901C1C;
     border-radius: 5px;
 }
 
-.eart{
+.eart {
     cursor: pointer;
     fill: red;
     color: red;

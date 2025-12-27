@@ -1,8 +1,8 @@
-.buttonaction{
+.buttonaction {
     width: 170px;
-height: 69px;
+    height: 69px;
 
-border-radius: 5px;
-background-color:#901C1C ;
-color:white ;
+    border-radius: 5px;
+    background-color: #901c1c;
+    color: white;
 }

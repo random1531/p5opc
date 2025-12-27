@@ -23,8 +23,9 @@ export default function picturecard({
       {picture && (
         <Image
           onClick={handleCilck}
-         onKeyDown={e => e.key === "Enter" && handleCilck()}
-         tabIndex={0}
+          onKeyDown={(e) => e.key === "Enter" && handleCilck()}
+          tabIndex={0}
+          aria-label={`image ${picturename}`}
           className="video"
           src={`/${picture}`}
           alt={picturename}
@@ -35,9 +36,10 @@ export default function picturecard({
       {video && (
         <video
           onClick={handleCilck}
-          onKeyDown={e => e.key === "Enter" && handleCilck()}
-           tabIndex={0}
+          onKeyDown={(e) => e.key === "Enter" && handleCilck()}
+          tabIndex={0}
           className="video"
+          aria-label={`video ${picturename}`}
           src={`/${video}`}
           alt={picturename}
           autoPlay
@@ -48,7 +50,6 @@ export default function picturecard({
         <ModalMedia
           ind={index}
           Click={() => setisOpen(!isOpen)}
-          
           data={dataformodal}
         />
       )}

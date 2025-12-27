@@ -37,23 +37,22 @@ export default function modalmedia({ data, Click, ind }) {
     window.addEventListener("keydown", usekeyboard);
   });
 
-
   return (
     <div className="modalmedia" ref={ref} tabIndex={-1} role="modal">
       <ImCross
         className="exit"
+        aria-label="exit or press echap"
         alt="exit"
         tabIndex={0}
-        
         onClick={Click}
       />
       <div className="contentmodal">
         <FaAngleLeft
-          aria-label="left navigation"
+          aria-label="précedent"
           alt="Precedent"
           className="arrow"
           tabIndex={0}
-          onKeyDown={e => e.key === "Enter" && leftnav()}
+          onKeyDown={(e) => e.key === "Enter" && leftnav()}
           onClick={leftnav}
         />
         {item && item.image && (
@@ -76,10 +75,11 @@ export default function modalmedia({ data, Click, ind }) {
         )}
         <FaAngleRight
           className="arrow"
+          aria-label="suivant"
           alt="Suivant"
           tabIndex={0}
           onClick={rightnav}
-          onKeyDown={e => e.key === "Enter" && rightnav()}
+          onKeyDown={(e) => e.key === "Enter" && rightnav()}
         />
       </div>
     </div>

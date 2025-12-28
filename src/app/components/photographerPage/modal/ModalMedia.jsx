@@ -1,9 +1,9 @@
 "use client";
 import "./modalmedia.css";
-import { ImCross } from "react-icons/im";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
+import { RxCross1 } from "react-icons/rx";
 
 export default function modalmedia({ data, Click, ind }) {
   const [actualindex, setIndex] = useState(ind);
@@ -43,14 +43,15 @@ export default function modalmedia({ data, Click, ind }) {
 
   return (
     <div className="modalmedia" ref={ref} tabIndex={-1} role="modal">
-      <ImCross
-        className="exit"
-        aria-label="exit or press echap"
-        alt="exit"
-        tabIndex={0}
-        onClick={Click}
-      />
       <div className="contentmodal">
+        <RxCross1
+          className="exit"
+          aria-label="exit or press echap"
+          alt="exit"
+          tabIndex={0}
+          onClick={Click}
+        />
+
         <FaAngleLeft
           aria-label="précedent"
           alt="Precedent"
@@ -60,23 +61,31 @@ export default function modalmedia({ data, Click, ind }) {
           onClick={leftnav}
         />
         {item && item.image && (
-          <Image
-            className="media"
-            src={`/${item.image}`}
-            width={400}
-            height={300}
-            alt={item.title}
-          />
+          <div className="infolight">
+            <Image
+              className="media"
+              src={`/${item.image}`}
+              width={400}
+              height={300}
+              alt={item.title}
+            />
+            <p className="titlemedia">{item.title}</p>
+          </div>
         )}
+
         {item && item.video && (
-          <video
-            className="media"
-            alt={item.title}
-            src={`/${item.video}`}
-            autoPlay
-            loop
-          />
+          <div>
+            <video
+              className="media"
+              alt={item.title}
+              src={`/${item.video}`}
+              autoPlay
+              loop
+            />
+            <p className="titlemedia">{item.title}</p>
+          </div>
         )}
+
         <FaAngleRight
           className="arrow"
           aria-label="suivant"

@@ -26,7 +26,7 @@ export default function sort({ likes }) {
         tabIndex={0}
         >
           <p>{selected}</p>
-          <FaChevronDown />
+          <FaChevronDown className="color" />
         </div>
       )}
       {isOpen && (
@@ -45,7 +45,7 @@ export default function sort({ likes }) {
                 >
                 Popularité
               </option>
-              <FaChevronUp />
+              <FaChevronUp className="color"  />
             </div>
             <hr></hr>
             <div

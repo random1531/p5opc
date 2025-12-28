@@ -47,6 +47,14 @@ form {
 .formsection label {
     width: 100%;
     text-align: left;
+    color: #312E2E;
+    font-family: DM Sans;
+font-weight: 400;
+font-size: 20px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+
 }
 
 .sendbutton {
@@ -63,6 +71,7 @@ form {
     font-size: 45px;
     right: 0;
     cursor: pointer;
+    color: white;
 }
 
 .headform {
@@ -74,4 +83,14 @@ p {
     font-family: DM Sans;
     font-weight: 400;
     font-size: 64px;
+}
+
+.titlef{
+    font-family: DM Sans;
+font-weight: 400;
+font-size: 64px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+
 }

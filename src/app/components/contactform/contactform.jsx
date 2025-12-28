@@ -30,7 +30,7 @@ export default function contactform({ name, close }) {
     <div className="test">
       <div className="containerform">
         <div className="headform">
-          <h3>Contactez-moi</h3>
+          <h3 className="titlef">Contactez-moi</h3>
           <p>{name}</p>
           <p onClick={close} className="exitcross">
             X

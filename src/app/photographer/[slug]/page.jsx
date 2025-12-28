@@ -9,8 +9,6 @@ export default async function photographer({ params }) {
   const { slug } = await params;
   const mediaphotographer = await getAllMediasForPhotographer(parseInt(slug));
   const photographer = await getPhotographer(parseInt(slug));
-
-  console.log(mediaphotographer.map((i) => i.likes).reduce((a, b) => a + b));
   return (
     <div className="pagephotographer">
       <Bottominfo

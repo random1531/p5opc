@@ -1,5 +1,5 @@
 .test {
-    top: 0;
+    top: 180;
     left: 0;
     position: absolute;
     background-color: #c4c4c466;
@@ -47,14 +47,13 @@ form {
 .formsection label {
     width: 100%;
     text-align: left;
-    color: #312E2E;
+    color: #312e2e;
     font-family: DM Sans;
-font-weight: 400;
-font-size: 20px;
-leading-trim: NONE;
-line-height: 100%;
-letter-spacing: 0%;
-
+    font-weight: 400;
+    font-size: 20px;
+    leading-trim: NONE;
+    line-height: 100%;
+    letter-spacing: 0%;
 }
 
 .sendbutton {
@@ -85,12 +84,10 @@ p {
     font-size: 64px;
 }
 
-.titlef{
+.titlef {
     font-family: DM Sans;
-font-weight: 400;
-font-size: 64px;
-leading-trim: NONE;
-line-height: 100%;
-letter-spacing: 0%;
-
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 100%;
+    letter-spacing: 0%;
 }

@@ -36,9 +36,6 @@ export default function modalmedia({ data, Click, ind }) {
   };
   useEffect(() => {
     window.addEventListener("keydown", usekeyboard);
-    const root = ref.current;
-    if (!root) return;
-    root.focus();
   }, []);
 
   return (

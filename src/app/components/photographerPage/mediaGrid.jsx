@@ -7,7 +7,6 @@ export default function dataphoto({ params }) {
   const [media, setMedia] = useState(params.sort((a, b) => b.likes - a.likes));
   const handlselect = (e) => {
     const selected = e.target.value;
-    console.log(e.target.value);
     if (selected === "Popularité") {
       setMedia([...params].sort((a, b) => b.likes - a.likes));
     }

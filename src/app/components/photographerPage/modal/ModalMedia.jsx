@@ -39,7 +39,7 @@ export default function modalmedia({ data, Click, ind }) {
   }, []);
 
   return (
-    <div className="modalmedia" ref={ref} tabIndex={-1} role="modal">
+    <div className="modalmedia" ref={ref} tabIndex={0} role="modal">
       <div className="contentmodal">
         <RxCross1
           className="exit"

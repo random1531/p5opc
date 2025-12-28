@@ -2,7 +2,6 @@
 import "./sort.css";
 import { useState } from "react";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
-
 export default function sort({ likes }) {
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState("Popularité");

@@ -13,14 +13,17 @@ export default function sort({ likes }) {
   };
 
   return (
+    <div className="sortbox">
+
+      <p className="sorts">Trier par</p>
     <div className="list">
       {!isOpen && (
         <div
-          onClick={() => setIsOpen(!isOpen)}
-          onKeyDown={(e) => e.key === "Enter" && setIsOpen(!isOpen)}
-          aria-label={`trier par ${selected}`}
-          className="listSort"
-          tabIndex={0}
+        onClick={() => setIsOpen(!isOpen)}
+        onKeyDown={(e) => e.key === "Enter" && setIsOpen(!isOpen)}
+        aria-label={`trier par ${selected}`}
+        className="listSort"
+        tabIndex={0}
         >
           <p>{selected}</p>
           <FaChevronDown />
@@ -32,14 +35,14 @@ export default function sort({ likes }) {
             <div
               onClick={() => handleClose("Popularité")}
               className="firstsort"
-            >
+              >
               <option
                 onClick={likes}
                 value="Popularité"
                 onKeyDown={(e) =>
                   e.key === "Enter" && handleClose("Popularité")
                 }
-              >
+                >
                 Popularité
               </option>
               <FaChevronUp />
@@ -49,12 +52,12 @@ export default function sort({ likes }) {
               onClick={() => handleClose("Date")}
               tabIndex={0}
               onKeyDown={(e) => e.key === "Enter" && handleClose("Date")}
-            >
+              >
               <option
                 onClick={likes}
                 onKeyDown={(e) => e.key === "Enter" && handleClose("Date")}
                 value="Date"
-              >
+                >
                 Date
               </option>
             </div>
@@ -63,12 +66,12 @@ export default function sort({ likes }) {
               onClick={() => handleClose("Titre")}
               tabIndex={0}
               onKeyDown={(e) => e.key === "Enter" && handleClose("Titre")}
-            >
+              >
               <option
                 onClick={likes}
                 onKeyDown={(e) => e.key === "Enter" && handleClose("Titre")}
                 value="Titre"
-              >
+                >
                 Titre
               </option>
             </div>
@@ -76,5 +79,6 @@ export default function sort({ likes }) {
         </div>
       )}
     </div>
+      </div>
   );
 }

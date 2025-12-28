@@ -4,6 +4,7 @@ import { ImCross } from "react-icons/im";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
+
 export default function modalmedia({ data, Click, ind }) {
   const [actualindex, setIndex] = useState(ind);
   const item = data.find((item, index) => index === actualindex);
@@ -35,7 +36,10 @@ export default function modalmedia({ data, Click, ind }) {
   };
   useEffect(() => {
     window.addEventListener("keydown", usekeyboard);
-  });
+    const root = ref.current;
+    if (!root) return;
+    root.focus();
+  }, []);
 
   return (
     <div className="modalmedia" ref={ref} tabIndex={-1} role="modal">
